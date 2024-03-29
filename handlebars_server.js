@@ -20,6 +20,8 @@ app.use((req, res, next) => {
     res.locals.activeLinks = activeLinks;
     next();
 });
+// static middleware (css, js, images)
+app.use(express.static('public'));
 
 // routes
 app.get('/', (req, res) => {
@@ -58,6 +60,22 @@ app.get('/resources', (req, res) => {
     res.render('resources');
 });
 
+
+// error middleware
+app.use(function(req, res){
+    res.status(404);
+	res.render('404');
+});
+
+app.use(function(err, req, res, next){
+	// output the error message
+	console.error(err.stack);
+    res.status(500);
+    res.render('500');
+});
+
+
+// start server
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
