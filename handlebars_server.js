@@ -63,6 +63,12 @@ app.get('/resources', (req, res) => {
 
 
 // error middleware
+
+// server error test route
+app.get('/test-error', (req, res, next) => {
+    next(new Error('This is a test error'));
+});
+
 app.use(function(req, res){
     res.status(404);
 	res.render('404');
