@@ -20,6 +20,7 @@ app.use((req, res, next) => {
     res.locals.activeLinks = activeLinks;
     next();
 });
+
 // static middleware (css, js, images)
 app.use(express.static('public'));
 
