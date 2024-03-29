@@ -10,12 +10,13 @@
 
 body {
         background-image: linear-gradient(125deg, #EFDFD4ff, rgb(218, 161, 124));
-        min-height: 100vh;
+        
 }
 main{
     
     padding: 25px;
     margin: 20px;
+    min-height: 100vh;
 }
 
 img{

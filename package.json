@@ -1,5 +1,20 @@
 {
   "dependencies": {
-    "express": "^4.19.2"
-  }
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2"
+  },
+  "scripts": {
+    "start": "node handlebars_server.js"
+  },
+  "name": "mynodesite",
+  "version": "1.0.0",
+  "description": "Kaya Psychotherapy",
+  "main": "handlebars_server.js",
+  "author": "Zach Albanese",
+  "license": "ISC",
+  "engines": {
+     "node": ">=v16"
+   }
+
 }
+
