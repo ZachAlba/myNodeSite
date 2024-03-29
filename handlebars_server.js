@@ -21,8 +21,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// static middleware (css, js, images)
-app.use(express.static('public'));
+
 
 // routes
 app.get('/', (req, res) => {
@@ -61,14 +60,16 @@ app.get('/resources', (req, res) => {
     res.render('resources');
 });
 
+// static middleware (css, js, images)
+app.use(express.static('public'));
 
-// error middleware
 
 // server error test route
 app.get('/test-error', (req, res, next) => {
     next(new Error('This is a test error'));
 });
 
+// error middleware
 app.use(function(req, res){
     res.status(404);
 	res.render('404');
