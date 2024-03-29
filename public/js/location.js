@@ -17,7 +17,7 @@ function init() {
         map: venueMap,
         title: 'Store Location'
     });
-
+    console.log("testing");
     // Geolocation
     if (Modernizr.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
